@@ -1,15 +1,15 @@
 package formation.afiuna.springboot.iod;
 
+import org.springframework.stereotype.Service;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
 public class ServiceC {
-    private ServiceB serviceB;
+    private final ServiceB serviceB;
 
-    // On se débarasse de ce constructeur
-    // public ServiceC(ServiceB serviceB) {        
-    //     this.serviceB = serviceB;
-    // }
-
-    public double calcule() {
-        double intermediateValue = this.serviceB.getValue() * this.serviceB.getCoefficient();
-        return intermediateValue * 3;
+    public double calcule() {        
+        return serviceB.calculeValueAndCoefficient() * 3;
     }
 }

@@ -1,21 +1,21 @@
 package formation.afiuna.springboot;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import formation.afiuna.springboot.iod.ServiceA;
 
 @SpringBootApplication
 public class SpringbootApplication {
-		
-	private static ServiceA serviceA;
 	
-	public static void main(String[] args) throws InterruptedException {				
+	public static void main(String[] args) {				
+		
+		try (AnnotationConfigApplicationContext context =
+                  new AnnotationConfigApplicationContext("formation.afiuna.springboot")) {
 
-		serviceA = new ServiceA();
-		double result = serviceA.calcule();		
-
-		System.out.println(result);
-
+					ServiceA serviceA = context.getBean(ServiceA.class);
+					System.out.println(serviceA.calcule());
+    }			
 
 		//SpringApplication.run(SpringbootApplication.class, args);
 	}	
