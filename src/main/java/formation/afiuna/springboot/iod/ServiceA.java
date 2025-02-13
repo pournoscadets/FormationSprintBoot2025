@@ -10,6 +10,8 @@ public class ServiceA {
     //     this.serviceB = serviceB;
     // }
 
+    // la version propre se trouve sur la branche principe_injection_dependance_goal_implementation_final
+
     public double calcule() {
         try(AnnotationConfigApplicationContext context =
          new AnnotationConfigApplicationContext("formation.afiuna.springboot.iod")) {
