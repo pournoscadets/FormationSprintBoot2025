@@ -1,7 +1,7 @@
 package formation.afiuna.springboot.iod;
 
 public class ServiceC {
-    private ServiceB serviceB;
+    private final ServiceB serviceB;
 
     public ServiceC(ServiceB serviceB) {        
         this.serviceB = serviceB;
