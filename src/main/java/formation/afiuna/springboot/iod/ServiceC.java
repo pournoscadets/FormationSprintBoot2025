@@ -3,9 +3,8 @@ package formation.afiuna.springboot.iod;
 public class ServiceC {
     private ServiceB serviceB;
 
-    public ServiceC() {
-        //Couplage fort entre le serviceC et le serviceB
-        this.serviceB = new ServiceB(10, 1.2);
+    public ServiceC(ServiceB serviceB) {        
+        this.serviceB = serviceB;
     }
 
     public double calcule() {
