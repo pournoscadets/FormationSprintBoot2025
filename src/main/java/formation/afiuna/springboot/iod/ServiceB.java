@@ -35,9 +35,7 @@ public class ServiceB {
     }
 
     @Bean    
-
     public ServiceB createBeanBB(){        
-
         return new ServiceB(10);
     }
         

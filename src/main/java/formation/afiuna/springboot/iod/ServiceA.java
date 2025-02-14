@@ -10,7 +10,7 @@ public class ServiceA {
     //     this.serviceB = serviceB;
     // }
 
-    // la version propre se trouve sur la branche principe_injection_dependance_goal_implementation_final
+    // la version finale se trouve sur la branche 04_principe_injection_dependance_goal_implementation_final
 
     public double calcule() {
         try(AnnotationConfigApplicationContext context =
