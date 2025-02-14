@@ -8,7 +8,7 @@ import formation.afiuna.springboot.iod.ServiceA;
 @SpringBootApplication
 public class SpringbootApplication {
 
-	private static final ServiceA serviceA;
+	private static ServiceA serviceA;
 	
 	public static void main(String[] args) {				
 

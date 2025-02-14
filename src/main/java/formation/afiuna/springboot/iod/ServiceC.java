@@ -8,7 +8,6 @@ public class ServiceC {
     }
 
     public double calcule() {
-        double intermediateValue = this.serviceB.getValue() * this.serviceB.getCoefficient();
-        return intermediateValue * 3;
+        return this.serviceB.getValue() * this.serviceB.getCoefficient() * 2;        
     }
 }
