@@ -10,6 +10,6 @@ public class ServiceC {
     private final ServiceB serviceB;
 
     public double calcule() {        
-        return serviceB.calculeValueAndCoefficient() * 3;
+        return serviceB.calculeValueAndCoefficient() * 2;
     }
 }

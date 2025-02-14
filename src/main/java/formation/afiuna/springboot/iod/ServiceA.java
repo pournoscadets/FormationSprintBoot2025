@@ -11,7 +11,6 @@ public class ServiceA {
 
 
     public double calcule() {
-        
-        return serviceB.calculeValueAndCoefficient() * 2;   
+        return serviceB.calculeValueAndCoefficient();   
     }
 }
