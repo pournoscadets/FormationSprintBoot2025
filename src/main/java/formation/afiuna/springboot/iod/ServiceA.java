@@ -6,12 +6,13 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class ServiceA {
+public class ServiceA {    
+
     private final ServiceB serviceB;
 
 
     public double calcule() {
         
-        return serviceB.calculeValueAndCoefficient() * 2;   
+        return serviceB.calculeValueAndCoefficient();   
     }
 }

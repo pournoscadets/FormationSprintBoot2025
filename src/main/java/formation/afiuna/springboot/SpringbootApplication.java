@@ -4,6 +4,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import formation.afiuna.springboot.iod.ServiceA;
+import formation.afiuna.springboot.iod.ServiceC;
 
 @SpringBootApplication
 public class SpringbootApplication {
@@ -14,7 +15,9 @@ public class SpringbootApplication {
                   new AnnotationConfigApplicationContext("formation.afiuna.springboot")) {
 
 					ServiceA serviceA = context.getBean(ServiceA.class);
-					System.out.println(serviceA.calcule());
+					ServiceC serviceC = context.getBean(ServiceC.class);
+					System.out.println("\nServiceA result : "+ serviceA.calcule()+"\n");
+					System.out.println("ServiceC result : "+ serviceC.calcule());
     }			
 
 		//SpringApplication.run(SpringbootApplication.class, args);

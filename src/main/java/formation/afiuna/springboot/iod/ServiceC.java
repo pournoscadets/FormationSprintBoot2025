@@ -1,15 +1,17 @@
 package formation.afiuna.springboot.iod;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import lombok.RequiredArgsConstructor;
-
 @Service
-@RequiredArgsConstructor
 public class ServiceC {
-    private final ServiceB serviceB;
+    
+    @Autowired
+    @Qualifier("serviceBWith2Argument")
+    private ServiceB serviceB;
 
     public double calcule() {        
-        return serviceB.calculeValueAndCoefficient() * 3;
+        return serviceB.calculeValueAndCoefficient();
     }
 }
