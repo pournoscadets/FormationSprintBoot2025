@@ -7,6 +7,16 @@ public class Compte {
     private double amount;
     private User user;
 
+    public Compte() {
+    }
+
+    public Compte(Long id, int compteNumber, double amount, User user) {
+        this.id = id;
+        this.compteNumber = compteNumber;
+        this.amount = amount;
+        this.user = user;
+    }
+
     public Long getId() {
         return id;
     }

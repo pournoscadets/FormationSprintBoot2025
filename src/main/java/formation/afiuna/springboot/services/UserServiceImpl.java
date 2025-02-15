@@ -12,7 +12,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    private List<User> users = List.of(new User(12L, "Ahmed", "Sylla", 30,"Abobo"));
+    private List<User> users = List.of(
+            new User(12L, "Ahmed", "Sylla", 30,"Abobo"),
+            new User(13L, "Yves", "KOUASSI", 25,"Adjame")
+    );
 
     @Override
     public void addUser(User user) {
@@ -21,12 +24,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findUser(Integer useId) {
-        return null;
+        return this.users.stream().filter(user -> user.getId().equals(useId)).findFirst().orElse(null);
     }
 
     @Override
     public List<User> findAll() {
-        return List.of();
+        return this.users;
     }
 
 }

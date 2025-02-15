@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping(value = "/api")
 public class TransactionController {
 
-    @PostMapping("/transfert")
+    @PostMapping(value = "/transfert", consumes = "application/json")
     public ResponseEntity<?> transfert() {
         return null;
     }
 
-    @GetMapping("/amount/{id}")
+    @GetMapping(value = "/amount/{id}", produces = "application/json")
     public ResponseEntity<?> getAmount(@PathVariable("id") Integer id) {
         return ResponseEntity.ok("OK");
     }
