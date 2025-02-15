@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import formation.afiuna.springboot.iod.ServiceA;
 import formation.afiuna.springboot.iod.ServiceC;
 
+// Same as @SpringBootConfiguration @EnableAutoConfiguration @ComponentScan (https://docs.spring.io/spring-boot/reference/using/using-the-springbootapplication-annotation.html)
 @SpringBootApplication
 public class SpringbootApplication {
 	

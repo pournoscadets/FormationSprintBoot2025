@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 
+// @@Component
 @Service
 @RequiredArgsConstructor
 public class ServiceA {    
