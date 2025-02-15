@@ -5,17 +5,19 @@ import formation.afiuna.springboot.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+
 import java.util.ArrayList;
 import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    List<User> users = List.of(
-            new User(1,"Andre", "KOUADIO", 20, "Adjame"),
-            new User(2,"Joel", "YAPI", 30, "Treichville"),
-            new User(3,"Mohamed", "SYLLA", 25, "Abobo")
-    );
+    private List<User> users = List.of(new User(12L, "Ahmed", "Sylla", 30,"Abobo"));
+
+    @Override
+    public void addUser(User user) {
+        users.add(user);
+    }
 
     @Override
     public User findUser(Integer useId) {
@@ -26,4 +28,5 @@ public class UserServiceImpl implements UserService {
     public List<User> findAll() {
         return List.of();
     }
+
 }
