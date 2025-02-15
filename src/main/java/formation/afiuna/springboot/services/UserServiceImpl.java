@@ -1,25 +1,22 @@
 package formation.afiuna.springboot.services;
 
-import formation.afiuna.springboot.entity.Compte;
 import formation.afiuna.springboot.entity.User;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 
 import java.util.ArrayList;
 import java.util.List;
-@Service
+@Component
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    private List<User> users = List.of(
-            new User(12L, "Ahmed", "Sylla", 30,"Abobo"),
-            new User(13L, "Yves", "KOUASSI", 25,"Adjame")
-    );
+    private List<User> users = new ArrayList<>();
 
     @Override
-    public void addUser(User user) {
+    public User addUser(User user) {
         users.add(user);
+        return user;
     }
 
     @Override
