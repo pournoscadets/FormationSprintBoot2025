@@ -8,5 +8,5 @@ spring:
       driver-class-name: org.postgresql.Driver
       # url: jdbc:postgresql://pg-21236294-akouayao2017-1f4d.f.aivencloud.com:25431/defaultdb
       url: ${DATABASE_URL}
-      username: avnadmin
-      password: AVNS_CPiFeFEWHbLX4LGFYzW
+      username: ${DATABASE_USERNAME}
+      password: ${DATABASE_PASSWORD}
