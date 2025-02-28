@@ -1,12 +1,3 @@
-server:
-  port: 8089
-
-spring:    
+spring:
     application:
         name: springboot
-    datasource:
-      driver-class-name: org.postgresql.Driver
-      # url: jdbc:postgresql://pg-21236294-akouayao2017-1f4d.f.aivencloud.com:25431/defaultdb
-      url: ${DATABASE_URL}
-      username: avnadmin
-      password: AVNS_CPiFeFEWHbLX4LGFYzW
