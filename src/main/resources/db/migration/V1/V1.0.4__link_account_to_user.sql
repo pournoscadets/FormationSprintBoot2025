@@ -1,0 +1,6 @@
+ALTER TABLE IF EXISTS account
+ADD COLUMN IF NOT EXISTS id_user BIGINT NOT NULL;
+
+ALTER TABLE IF EXISTS account
+ADD CONSTRAINT account_user_fk
+    FOREIGN KEY (id_user) REFERENCES users(id);

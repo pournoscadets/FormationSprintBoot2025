@@ -14,9 +14,9 @@ spring:
     jpa:
       database-platform: org.hibernate.dialect.PostgreSQLDialect      
       #With schema
-      # properties:
-      #   hibernate:
-      #     default_schema: ${DATASOURCE_DEFAULT_SCHEMA:transfert_money}
+      properties:
+        hibernate:
+          default_schema: ${DATASOURCE_DEFAULT_SCHEMA:transfert_money}
       
     flyway:
       schemas:

@@ -1,0 +1,6 @@
+ALTER TABLE IF EXISTS users
+ADD COLUMN IF NOT EXISTS id_address BIGINT NULL;
+
+ALTER TABLE IF EXISTS users
+ADD CONSTRAINT user_address_fk
+    FOREIGN KEY (id_address) REFERENCES address(id);
