@@ -22,4 +22,13 @@ spring:
       schemas:
       - ${DATASOURCE_DEFAULT_SCHEMA:transfert_money}
       out-of-order: false
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    disableSwaggerDefaultUrl: true
+    #  showLoginEndpoint: false
+    path: /swagger-ui.html
+  apiDocs:
+    path: /v3/api-docs
     
