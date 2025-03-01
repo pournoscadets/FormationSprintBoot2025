@@ -7,10 +7,17 @@ spring:
     datasource:
       driver-class-name: org.postgresql.Driver
       #Without schema
-      url: ${DATABASE_URL:jdbc:postgresql://pg-21236294-akouayao2017-1f4d.f.aivencloud.com:25431/defaultdb}
-      # url: ${DATABASE_URL:jdbc:postgresql://pg-21236294-akouayao2017-1f4d.f.aivencloud.com:25431/defaultdb?currentSchema=${DATASOURCE_DEFAULT_SCHEMA:transfert_money}}
+      url: ${DATABASE_URL:jdbc:postgresql://pg-21236294-akouayao2017-1f4d.f.aivencloud.com:25431/defaultdb}      
       username: ${DATABASE_USERNAM:avnadmin}
-      password: ${DATABASE_PASSWORD:AVNS_CPiFeFEWHbLX4LGFYzW}
+      password: ${DATABASE_PASSWORD:AVNS_CPiFeFEWHbLX4LGFYzW}      
+  
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect      
+      #With schema
+      # properties:
+      #   hibernate:
+      #     default_schema: ${DATASOURCE_DEFAULT_SCHEMA:transfert_money}
+      
     flyway:
       schemas:
       - ${DATASOURCE_DEFAULT_SCHEMA:transfert_money}
